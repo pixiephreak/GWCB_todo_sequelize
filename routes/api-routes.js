@@ -19,7 +19,7 @@ router.get("/", function(req, res) {
   })
   });
 
-  post route -> back to index
+  // post route -> back to index
   router.post("/burgers/create", function(req, res) {
     // takes the request object using it as input for buger.addBurger
     burger.create(req.body.burger_name, function(result) {
@@ -30,7 +30,7 @@ router.get("/", function(req, res) {
     });
   });
 
-  put route -> back to index
+  // put route -> back to index
   router.put("/burgers/update", function(req, res) {
     burger.update(req.body.burger_id, function(result) {
       // wrapper for orm.js that using MySQL update callback will return a log to console,
